@@ -10,8 +10,7 @@ import Image from "next/image";
 interface AboutProps {
   inView: boolean;
 }
-
-export default function About({ inView }: AboutProps) {
+ const About =({ inView }: AboutProps)=> {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -161,3 +160,6 @@ export default function About({ inView }: AboutProps) {
     </div>
   );
 }
+
+
+export default About;

@@ -1,6 +1,6 @@
 .skillsSection {
   position: relative;
-  
+
   &::before {
     content: "";
     position: absolute;
@@ -8,9 +8,14 @@
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(var(--primary-rgb), 0.3), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(var(--primary-rgb, 59, 130, 246), 0.3), /* Fallback to a blue color */
+      transparent
+    );
   }
-  
+
   &::after {
     content: "";
     position: absolute;
@@ -18,29 +23,38 @@
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(var(--primary-rgb), 0.3), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(var(--primary-rgb, 59, 130, 246), 0.3), /* Fallback to a blue color */
+      transparent
+    );
   }
 }
 
 .skillCard {
   position: relative;
   transition: transform 0.3s ease;
-  
+
   &:hover {
     transform: translateY(-5px);
   }
-  
+
   &::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(45deg, rgba(var(--primary-rgb), 0.1), transparent);
+    background: linear-gradient(
+      45deg,
+      rgba(var(--primary-rgb, 59, 130, 246), 0.1), /* Fallback to a blue color */
+      transparent
+    );
     opacity: 0;
     transition: opacity 0.3s ease;
     border-radius: 0.5rem;
     z-index: -1;
   }
-  
+
   &:hover::before {
     opacity: 1;
   }
@@ -50,7 +64,7 @@
   span {
     animation: fadeIn 0.5s ease forwards;
     opacity: 0;
-    
+
     @for $i from 1 through 20 {
       &:nth-child(#{$i}) {
         animation-delay: #{$i * 0.05}s;
@@ -60,6 +74,12 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

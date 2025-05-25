@@ -6,15 +6,40 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { Toaster } from '@/components/ui/toaster';
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
 });
 
 export const metadata: Metadata = {
-  title: 'My Portfolio - Professional Developer',
-  description: 'Personal portfolio showcasing my projects, skills, and experience as a professional developer.',
-  keywords: ['portfolio', 'developer', 'projects', 'skills', 'resume'],
+  title: 'Jishnu A P | Full-Stack Developer Portfolio',
+  description: 'Hi, I’m Jishnu — a full-stack developer specializing in building modern, scalable web applications using the MERN stack.',
+  keywords: ['Jishnu', 'Full-Stack Developer', 'Portfolio', 'Next.js', 'React', 'MongoDB', 'TypeScript', 'Projects', 'Resume'],
+  icons: {
+    icon: '/personal/bat.png',
+  },
+  openGraph: {
+    title: 'Jishnu A P | Full-Stack Developer Portfolio',
+    description: 'Showcasing projects, skills, and experience as a MERN-stack developer.',
+    url: 'https://your-portfolio-domain.com',
+    siteName: 'Jishnu Portfolio',
+    images: [
+      {
+        url: '/og-image.png', // optional: add an OG image
+        width: 1200,
+        height: 630,
+        alt: 'Jishnu A P Portfolio',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Jishnu A P | Full-Stack Developer',
+    description: 'Explore my portfolio to see my skills and featured projects.',
+    creator: '@your_twitter_handle', // optional
+    images: ['/og-image.png'],
+  },
 };
 
 export default function RootLayout({

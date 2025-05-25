@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import styles from "./Hero.module.scss";
 import Image from "next/image";
 
-export default function Hero() {
+ const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Handle parallax effect on mousemove
@@ -166,3 +166,5 @@ export default function Hero() {
     </div>
   );
 }
+
+export default Hero;
