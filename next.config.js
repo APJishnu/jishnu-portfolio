@@ -6,7 +6,7 @@ const nextConfig = {
   },
   images: { unoptimized: true },
   sassOptions: {
-    includePaths: ['./components', './app'],
+    includePaths: ['./components', './app', './styles'], // Add styles directory
   },
 };
 

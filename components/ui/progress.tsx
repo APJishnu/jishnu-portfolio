@@ -1,28 +1,37 @@
 'use client';
 
 import * as React from 'react';
-import * as ProgressPrimitive from '@radix-ui/react-progress';
-
+import { Progress as AntdProgress } from 'antd';
 import { cn } from '@/lib/utils';
+import styles from '@/themes/styles/progress.module.scss';
 
-const Progress = React.forwardRef<
-  React.ElementRef<typeof ProgressPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>
->(({ className, value, ...props }, ref) => (
-  <ProgressPrimitive.Root
-    ref={ref}
-    className={cn(
-      'relative h-4 w-full overflow-hidden rounded-full bg-secondary',
-      className
-    )}
-    {...props}
-  >
-    <ProgressPrimitive.Indicator
-      className="h-full w-full flex-1 bg-primary transition-all"
-      style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
-    />
-  </ProgressPrimitive.Root>
-));
-Progress.displayName = ProgressPrimitive.Root.displayName;
+interface ProgressProps {
+  className?: string;
+  value?: number;
+  color?: string; // Keep for compatibility, but ignored
+}
+
+const Progress = React.forwardRef<HTMLDivElement, ProgressProps>(
+  ({ className, value = 0, color, ...props }, ref) => {
+    const safeValue = value ?? 0;
+    const darkBlue = '#1e40af'; // Tailwind blue-800
+
+    return (
+      <div className={cn('relative', className)}>
+        <AntdProgress
+          ref={ref}
+          className={cn(styles.progressBar, 'h-4', className)}
+          percent={safeValue}
+          strokeColor={darkBlue}
+          showInfo={false}
+          strokeWidth={8}
+          {...props}
+        />
+      </div>
+    );
+  }
+);
+
+Progress.displayName = 'Progress';
 
 export { Progress };
