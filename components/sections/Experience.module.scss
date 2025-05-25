@@ -1,0 +1,99 @@
+.experienceSection {
+  position: relative;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(var(--primary-rgb), 0.3), transparent);
+  }
+  
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(var(--primary-rgb), 0.3), transparent);
+  }
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, hsl(var(--primary)), transparent);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+    
+    @media screen and (max-width: 768px) {
+      left: 31px;
+    }
+  }
+}
+
+.timelineItem {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 20px;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: hsl(var(--primary));
+    border: 2px solid hsl(var(--primary));
+    top: 22px;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 0 4px rgba(var(--primary-rgb), 0.2);
+  }
+}
+
+.left {
+  left: 0;
+  
+  &::after {
+    right: -8px;
+    
+    @media screen and (max-width: 768px) {
+      left: 23px;
+    }
+  }
+}
+
+.right {
+  left: 50%;
+  
+  &::after {
+    left: -8px;
+    
+    @media screen and (max-width: 768px) {
+      left: 23px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    left: 0;
+  }
+}
