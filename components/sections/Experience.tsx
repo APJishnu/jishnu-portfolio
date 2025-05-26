@@ -27,16 +27,16 @@ export default function Experience({ inView }: ExperienceProps) {
       company: "Techfriar Technologies",
       date: "Jul 2024 – Present",
       description:
-        "Built scalable full-stack applications using Next.js, Node.js, and MongoDB. Integrated Razorpay for payments, optimized API performance, and collaborated with the UI/UX team to ensure responsive and accessible designs.",
+        "Engineer scalable MERN stack applications using Next.js and MongoDB, specializing in immersive 3D web interfaces with Three.js, delivering responsive, accessible, and performance-optimized user experiences.",
       type: "work",
     },
     {
       id: "2",
       title: "MERN Stack Intern",
-      company: "Wayone Technologies",
+      company: "Wayone Technologies, Ottapalam",
       date: "Feb 2024 – May 2024",
       description:
-        "Completed a hands-on internship focused on the MERN stack. Built end-to-end features, improved project structure and API design, and learned industry best practices in full-stack development.",
+        "Developed dynamic MERN stack features, integrating 3D visualizations with Three.js and crafting intuitive, user-focused web applications with robust architecture.",
       type: "work",
     },
     {
@@ -45,25 +45,34 @@ export default function Experience({ inView }: ExperienceProps) {
       company: "Commissioner Office, Kochi",
       date: "Jan 2023 – Mar 2023",
       description:
-        "Hands-on experience in cybersecurity practices, including vulnerability assessments and threat mitigation strategies. Participated in real-world workshops on network security.",
+        "Mastered cybersecurity fundamentals, conducting vulnerability assessments and implementing secure network protocols to ensure robust system integrity.",
       type: "work",
     },
     {
       id: "4",
       title: "Java Programming Intern",
-      company: "Lekshmi Infotech",
+      company: "Lekshmi Infotech, Ernakulam",
       date: "Apr 2022 – Jun 2022",
       description:
-        "Learned object-oriented programming and assisted in debugging Java-based applications. Supported senior developers in software testing and analysis.",
+        "Enhanced Java-based applications through object-oriented programming, optimizing code quality and supporting agile development processes.",
       type: "work",
     },
     {
       id: "5",
       title: "Diploma in Computer Engineering",
       institution: "I.P.T & G.P.T.C Shoranur",
-      date: "2021 – 2024",
+      date: "2019 – 2022",
       description:
-        "Graduated with 78%. Focused on Web Development, DBMS, Object-Oriented Programming, and Networking. Created several full-stack web applications as academic projects.",
+        "Graduated with 78%, excelling in Web Development, DBMS, OOP, and Networking. Engineered innovative full-stack web projects with a focus on modern technologies.",
+      type: "education",
+    },
+    {
+      id: "6",
+      title: "Plus Two (Biology Science)",
+      institution: "TRK HSS Vaniyamkulam",
+      date: "2018 – 2019",
+      description:
+        "Completed higher secondary education in Biology Science, building a strong foundation in analytical thinking and problem-solving.",
       type: "education",
     },
   ];
