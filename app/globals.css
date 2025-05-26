@@ -6,7 +6,6 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --dropdown-gradient-to: 330 100% 70%; /* tailwind pink-500-ish */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,7 +13,6 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-    --dropdown-gradient-to: 330 100% 70%;
   }
 }
 
@@ -45,7 +43,6 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
     --radius: 0.5rem;
-    
   }
   
   .light {
@@ -73,7 +70,6 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --dropdown-gradient-to: 330 100% 70%; 
   }
 }
 
@@ -173,5 +169,3 @@ html, body {
 .project-card:hover .project-image {
   @apply scale-105 blur-sm;
 }
-
-

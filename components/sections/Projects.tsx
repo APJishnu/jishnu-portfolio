@@ -42,7 +42,7 @@ export default function Projects({ inView }: ProjectsProps) {
       category: "fullstack",
       links: {
         demo: "https://studentlink-cs.vercel.app/",
-        github: "https://github.com/APJishnu",
+        github: "https://github.com/APJishnu/iptandgptc_cs_frontend",
       },
     },
     {
@@ -56,7 +56,7 @@ export default function Projects({ inView }: ProjectsProps) {
       category: "fullstack",
       links: {
         demo: "https://techfriar-week5-movie-ticket-booking-app.vercel.app/",
-        github: "https://github.com/APJishnu",
+        github: "https://github.com/APJishnu/Techfriar_Week5_MovieTicket_Booking_app",
       },
     },
     {
