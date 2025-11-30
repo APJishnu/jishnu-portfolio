@@ -153,7 +153,7 @@ import Image from "next/image";
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <Image
-            src="/personal/profile.png"
+            src="/personal/hero-profile.png"
             alt="Jishnu A P - Full-Stack Developer"
             width={280}
             height={280}

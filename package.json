@@ -8,6 +8,18 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "keywords": [
+    "Next.js",
+    "React",
+    "Full Stack Developer",
+    "Portfolio",
+    "Frontend Developer",
+    "MERN Stack",
+    "Jishnu AP",
+    "Web Development",
+    "Tailwind CSS",
+    "TypeScript"
+  ],
   "dependencies": {
     "@hookform/resolvers": "3.9.0",
     "@next/swc-wasm-nodejs": "13.5.1",

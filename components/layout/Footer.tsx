@@ -69,11 +69,11 @@ export default function Footer() {
             <address className="not-italic text-muted-foreground mb-4 space-y-2">
             <h3 className="text-lg font-bold mb-4">Contact</h3>
 
-              <p>Email: <a href="mailto:apjishnu23@gmail.com" className="hover:text-primary">apjishnu23@gmail.com</a></p>
+              <p>Email: <a href="mailto:jishnudev@duck.com" className="hover:text-primary">jishnudev@duck.com</a></p>
               <p>Location: Ottapalam, Palakkad, Kerala</p>
             </address>
             <Link
-              href="/resume/Jishnu_AP_Tech_Resume_2025.pdf"
+              href="/resume/Jishnu_AP_Full_Stack_Developer_Resume.pdf"
               className="inline-flex items-center text-primary hover:underline"
               target="_blank"
               rel="noopener noreferrer"

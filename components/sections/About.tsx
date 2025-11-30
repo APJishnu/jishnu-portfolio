@@ -42,7 +42,7 @@ const About = ({ inView }: AboutProps) => {
           animate={inView ? "visible" : "hidden"}
           variants={containerVariants}
         >
-          <motion.div variants={itemVariants} className="text-center mb-16">
+          <motion.div variants={itemVariants} className="text-center mb-6">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               About <span className="gradient-text">Me</span>
             </h2>
@@ -56,7 +56,7 @@ const About = ({ inView }: AboutProps) => {
           <div
             className={`grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 ${styles.aboutContent}`}
           >
-            <motion.div
+            {/* <motion.div
               variants={itemVariants}
               className={`${styles.aboutImageContainer} relative`}
             >
@@ -67,21 +67,21 @@ const About = ({ inView }: AboutProps) => {
                 <Image
                   width={600}
                   height={400}
-                  src="/personal/profile-5.png"
+                  src="/personal/profile.png"
                   alt="About"
-                  className="object-contain w-full h-full z-10"
+                  className="object-cover w-full h-full z-10"
                   loading="lazy"
                 />
               </div>
-            </motion.div>
+            </motion.div> */}
             <motion.div
               variants={itemVariants}
               className="flex flex-col justify-center"
             >
-              <h3 className="text-2xl font-bold mb-4 flex items-center">
+              {/* <h3 className="text-2xl font-bold mb-4 flex items-center">
                 <User className="mr-2 h-5 w-5 text-primary" />
                 About Me
-              </h3>
+              </h3> */}
               <p className="text-muted-foreground mb-4 text-justify">
                 I’m Jishnu A P, a 21-year-old full-stack developer from
                 Ottapalam, Palakkad, with a passion for crafting innovative and
@@ -98,7 +98,7 @@ const About = ({ inView }: AboutProps) => {
                 open-source projects.
               </p>
               <Button asChild className={`self-start ${styles.downloadButton}`}>
-                <a href="/resume/Jishnu_AP_Tech_Resume_2025.pdf" download>
+                <a href="/resume/Jishnu_AP_Full_Stack_Developer_Resume.pdf" download>
                   <Download className="mr-2 h-4 w-4" />
                   Download Resume
                 </a>
