@@ -9,6 +9,8 @@ export const metadata = {
 };
 
 export default function ContactPage() {
+  const [emailUser, emailHost] = profile.email.split("@");
+
   return (
     <>
       <PageIntro
@@ -20,8 +22,9 @@ export default function ContactPage() {
         <div className="contact-primary">
           <span className="contact-icon"><Mail size={19} strokeWidth={1.5} aria-hidden="true" /></span>
           <p className="mono-label">EMAIL</p>
-          <a className="contact-email" href={`mailto:${profile.email}`}>
-            {profile.email}<ArrowUpRight size={19} strokeWidth={1.6} aria-hidden="true" />
+          <a className="contact-email" href={`mailto:${profile.email}`} aria-label={profile.email}>
+            <span className="contact-email-address">{emailUser}@<wbr />{emailHost}</span>
+            <ArrowUpRight size={19} strokeWidth={1.6} aria-hidden="true" />
           </a>
           <p>Messages about full-stack development opportunities are welcome.</p>
         </div>
