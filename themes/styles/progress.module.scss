@@ -1,0 +1,26 @@
+.progressBar {
+  .ant-progress-outer {
+    border-radius: 9999px; /* Fully rounded edges */
+    overflow: hidden;
+    background: #e5e7eb; /* Tailwind gray-200 */
+  }
+
+  .ant-progress-inner {
+    background: #e5e7eb;
+  }
+
+  .ant-progress-bg {
+    background: linear-gradient(90deg, #1e40af, #3b82f6); /* Dark blue to lighter blue */
+    box-shadow: 0 0 8px rgba(30, 64, 175, 0.5); /* Subtle glow */
+    animation: progressFill 1.5s ease-out forwards;
+  }
+}
+
+@keyframes progressFill {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
