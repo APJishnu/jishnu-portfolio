@@ -1,0 +1,467 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-02T07:35:45Z",
+  "title": "Design System: Jishnu Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm paper",
+        "tonalRamp": [
+          "oklch(15% 0.008 91.5)",
+          "oklch(25% 0.008 91.5)",
+          "oklch(35% 0.008 91.5)",
+          "oklch(45% 0.008 91.5)",
+          "oklch(55% 0.008 91.5)",
+          "oklch(65% 0.008 91.5)",
+          "oklch(75% 0.008 91.5)",
+          "oklch(95% 0.008 91.5)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Near-black",
+        "tonalRamp": [
+          "oklch(15% 0.000 0.0)",
+          "oklch(25% 0.000 0.0)",
+          "oklch(35% 0.000 0.0)",
+          "oklch(45% 0.000 0.0)",
+          "oklch(55% 0.000 0.0)",
+          "oklch(65% 0.000 0.0)",
+          "oklch(75% 0.000 0.0)",
+          "oklch(95% 0.000 0.0)"
+        ]
+      },
+      "orange": {
+        "role": "primary",
+        "displayName": "Registration orange",
+        "tonalRamp": [
+          "oklch(15% 0.207 33.7)",
+          "oklch(25% 0.207 33.7)",
+          "oklch(35% 0.207 33.7)",
+          "oklch(45% 0.207 33.7)",
+          "oklch(55% 0.207 33.7)",
+          "oklch(65% 0.207 33.7)",
+          "oklch(75% 0.207 33.7)",
+          "oklch(95% 0.207 33.7)"
+        ]
+      },
+      "accent-ink": {
+        "role": "primary",
+        "displayName": "Deep accent ink",
+        "tonalRamp": [
+          "oklch(15% 0.168 33.0)",
+          "oklch(25% 0.168 33.0)",
+          "oklch(35% 0.168 33.0)",
+          "oklch(45% 0.168 33.0)",
+          "oklch(55% 0.168 33.0)",
+          "oklch(65% 0.168 33.0)",
+          "oklch(75% 0.168 33.0)",
+          "oklch(95% 0.168 33.0)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Quiet gray",
+        "tonalRamp": [
+          "oklch(15% 0.010 100.1)",
+          "oklch(25% 0.010 100.1)",
+          "oklch(35% 0.010 100.1)",
+          "oklch(45% 0.010 100.1)",
+          "oklch(55% 0.010 100.1)",
+          "oklch(65% 0.010 100.1)",
+          "oklch(75% 0.010 100.1)",
+          "oklch(95% 0.010 100.1)"
+        ]
+      },
+      "muted-readable": {
+        "role": "neutral",
+        "displayName": "Readable gray",
+        "tonalRamp": [
+          "oklch(15% 0.013 101.0)",
+          "oklch(25% 0.013 101.0)",
+          "oklch(35% 0.013 101.0)",
+          "oklch(45% 0.013 101.0)",
+          "oklch(55% 0.013 101.0)",
+          "oklch(65% 0.013 101.0)",
+          "oklch(75% 0.013 101.0)",
+          "oklch(95% 0.013 101.0)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Soft stone",
+        "tonalRamp": [
+          "oklch(15% 0.013 91.5)",
+          "oklch(25% 0.013 91.5)",
+          "oklch(35% 0.013 91.5)",
+          "oklch(45% 0.013 91.5)",
+          "oklch(55% 0.013 91.5)",
+          "oklch(65% 0.013 91.5)",
+          "oklch(75% 0.013 91.5)",
+          "oklch(95% 0.013 91.5)"
+        ]
+      },
+      "surface-raised": {
+        "role": "neutral",
+        "displayName": "Raised paper",
+        "tonalRamp": [
+          "oklch(15% 0.008 91.5)",
+          "oklch(25% 0.008 91.5)",
+          "oklch(35% 0.008 91.5)",
+          "oklch(45% 0.008 91.5)",
+          "oklch(55% 0.008 91.5)",
+          "oklch(65% 0.008 91.5)",
+          "oklch(75% 0.008 91.5)",
+          "oklch(95% 0.008 91.5)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Ink rule",
+        "tonalRamp": [
+          "oklch(15% 0.000 0.0 / 0.38)",
+          "oklch(25% 0.000 0.0 / 0.38)",
+          "oklch(35% 0.000 0.0 / 0.38)",
+          "oklch(45% 0.000 0.0 / 0.38)",
+          "oklch(55% 0.000 0.0 / 0.38)",
+          "oklch(65% 0.000 0.0 / 0.38)",
+          "oklch(75% 0.000 0.0 / 0.38)",
+          "oklch(95% 0.000 0.0 / 0.38)"
+        ]
+      },
+      "rule-soft": {
+        "role": "neutral",
+        "displayName": "Soft ink rule",
+        "tonalRamp": [
+          "oklch(15% 0.000 0.0 / 0.2)",
+          "oklch(25% 0.000 0.0 / 0.2)",
+          "oklch(35% 0.000 0.0 / 0.2)",
+          "oklch(45% 0.000 0.0 / 0.2)",
+          "oklch(55% 0.000 0.0 / 0.2)",
+          "oklch(65% 0.000 0.0 / 0.2)",
+          "oklch(75% 0.000 0.0 / 0.2)",
+          "oklch(95% 0.000 0.0 / 0.2)"
+        ]
+      },
+      "focus": {
+        "role": "primary",
+        "displayName": "Focus red",
+        "tonalRamp": [
+          "oklch(15% 0.186 32.7)",
+          "oklch(25% 0.186 32.7)",
+          "oklch(35% 0.186 32.7)",
+          "oklch(45% 0.186 32.7)",
+          "oklch(55% 0.186 32.7)",
+          "oklch(65% 0.186 32.7)",
+          "oklch(75% 0.186 32.7)",
+          "oklch(95% 0.186 32.7)"
+        ]
+      },
+      "ink-theme-accent-ink": {
+        "role": "primary",
+        "displayName": "Ink-theme accent",
+        "tonalRamp": [
+          "oklch(15% 0.136 36.5)",
+          "oklch(25% 0.136 36.5)",
+          "oklch(35% 0.136 36.5)",
+          "oklch(45% 0.136 36.5)",
+          "oklch(55% 0.136 36.5)",
+          "oklch(65% 0.136 36.5)",
+          "oklch(75% 0.136 36.5)",
+          "oklch(95% 0.136 36.5)"
+        ]
+      },
+      "ink-theme-muted": {
+        "role": "neutral",
+        "displayName": "Ink-theme quiet gray",
+        "tonalRamp": [
+          "oklch(15% 0.015 88.7)",
+          "oklch(25% 0.015 88.7)",
+          "oklch(35% 0.015 88.7)",
+          "oklch(45% 0.015 88.7)",
+          "oklch(55% 0.015 88.7)",
+          "oklch(65% 0.015 88.7)",
+          "oklch(75% 0.015 88.7)",
+          "oklch(95% 0.015 88.7)"
+        ]
+      },
+      "ink-theme-muted-readable": {
+        "role": "neutral",
+        "displayName": "Ink-theme readable gray",
+        "tonalRamp": [
+          "oklch(15% 0.014 88.7)",
+          "oklch(25% 0.014 88.7)",
+          "oklch(35% 0.014 88.7)",
+          "oklch(45% 0.014 88.7)",
+          "oklch(55% 0.014 88.7)",
+          "oklch(65% 0.014 88.7)",
+          "oklch(75% 0.014 88.7)",
+          "oklch(95% 0.014 88.7)"
+        ]
+      },
+      "ink-theme-surface": {
+        "role": "neutral",
+        "displayName": "Ink-theme stone",
+        "tonalRamp": [
+          "oklch(15% 0.009 107.0)",
+          "oklch(25% 0.009 107.0)",
+          "oklch(35% 0.009 107.0)",
+          "oklch(45% 0.009 107.0)",
+          "oklch(55% 0.009 107.0)",
+          "oklch(65% 0.009 107.0)",
+          "oklch(75% 0.009 107.0)",
+          "oklch(95% 0.009 107.0)"
+        ]
+      },
+      "ink-theme-surface-raised": {
+        "role": "neutral",
+        "displayName": "Ink-theme raised surface",
+        "tonalRamp": [
+          "oklch(15% 0.007 106.9)",
+          "oklch(25% 0.007 106.9)",
+          "oklch(35% 0.007 106.9)",
+          "oklch(45% 0.007 106.9)",
+          "oklch(55% 0.007 106.9)",
+          "oklch(65% 0.007 106.9)",
+          "oklch(75% 0.007 106.9)",
+          "oklch(95% 0.007 106.9)"
+        ]
+      },
+      "ink-theme-rule": {
+        "role": "neutral",
+        "displayName": "Ink-theme rule",
+        "tonalRamp": [
+          "oklch(15% 0.008 91.5 / 0.4)",
+          "oklch(25% 0.008 91.5 / 0.4)",
+          "oklch(35% 0.008 91.5 / 0.4)",
+          "oklch(45% 0.008 91.5 / 0.4)",
+          "oklch(55% 0.008 91.5 / 0.4)",
+          "oklch(65% 0.008 91.5 / 0.4)",
+          "oklch(75% 0.008 91.5 / 0.4)",
+          "oklch(95% 0.008 91.5 / 0.4)"
+        ]
+      },
+      "ink-theme-rule-soft": {
+        "role": "neutral",
+        "displayName": "Ink-theme soft rule",
+        "tonalRamp": [
+          "oklch(15% 0.008 91.5 / 0.23)",
+          "oklch(25% 0.008 91.5 / 0.23)",
+          "oklch(35% 0.008 91.5 / 0.23)",
+          "oklch(45% 0.008 91.5 / 0.23)",
+          "oklch(55% 0.008 91.5 / 0.23)",
+          "oklch(65% 0.008 91.5 / 0.23)",
+          "oklch(75% 0.008 91.5 / 0.23)",
+          "oklch(95% 0.008 91.5 / 0.23)"
+        ]
+      },
+      "ink-theme-focus": {
+        "role": "primary",
+        "displayName": "Ink-theme focus",
+        "tonalRamp": [
+          "oklch(15% 0.127 37.0)",
+          "oklch(25% 0.127 37.0)",
+          "oklch(35% 0.127 37.0)",
+          "oklch(45% 0.127 37.0)",
+          "oklch(55% 0.127 37.0)",
+          "oklch(65% 0.127 37.0)",
+          "oklch(75% 0.127 37.0)",
+          "oklch(95% 0.127 37.0)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Main archive and project-led page titles."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section statements and case-study headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Compact serif headings in supporting blocks."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Explanatory copy and interface text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Numbered records, section markers, and metadata."
+      }
+    },
+    "shadows": [
+      {
+        "name": "mobile-menu",
+        "value": "0 12px 18px rgba(0,0,0,.08)",
+        "purpose": "Separates the expanded mobile navigation from the page."
+      },
+      {
+        "name": "field-notes",
+        "value": "0 10px 28px rgba(0,0,0,.12)",
+        "purpose": "Lifts the contextual notes panel above the project canvas."
+      }
+    ],
+    "motion": [
+      {
+        "name": "theme-transition",
+        "value": "220ms ease",
+        "purpose": "Transitions the page background and foreground when the theme changes."
+      },
+      {
+        "name": "navigation-color",
+        "value": "160ms ease",
+        "purpose": "Transitions navigation and quiet control colors on hover."
+      },
+      {
+        "name": "navigation-underline",
+        "value": "180ms ease",
+        "purpose": "Reveals the active or hovered navigation underline."
+      },
+      {
+        "name": "project-registration",
+        "value": "0.42s cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Briefly clips the project canvas as the selected project changes."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms",
+        "purpose": "Collapses animation and transition duration when reduced motion is requested."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-content",
+        "value": "1841px"
+      },
+      {
+        "name": "index-adjustment",
+        "value": "1200px"
+      },
+      {
+        "name": "mobile-navigation",
+        "value": "900px"
+      },
+      {
+        "name": "single-column-archive",
+        "value": "680px"
+      },
+      {
+        "name": "compact-mobile",
+        "value": "360px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Desktop Navigation",
+      "kind": "nav",
+      "refersTo": "desktop-nav-link",
+      "description": "Compact route links with a short orange underline on hover and for the current route.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#\" aria-current=\"page\">Work</a><a href=\"#\">Experience</a><a href=\"#\">About</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:clamp(15px,2.2vw,35px)}.ds-nav a{position:relative;display:inline-flex;align-items:center;min-height:44px;color:var(--muted-readable);font-family:var(--sans);font-size:.81rem;text-decoration:none;transition:color 160ms ease}.ds-nav a::after{position:absolute;right:0;bottom:8px;left:0;height:2px;background:var(--orange);content:\"\";transform:scaleX(0);transform-origin:left;transition:transform 180ms ease}.ds-nav a:hover,.ds-nav a[aria-current=page]{color:var(--ink)}.ds-nav a:hover::after,.ds-nav a[aria-current=page]::after{transform:scaleX(1)}.ds-nav a:focus-visible{outline:2px solid var(--focus);outline-offset:4px}"
+    },
+    {
+      "name": "Project Index Row",
+      "kind": "custom",
+      "refersTo": "project-index-row",
+      "description": "A numbered record links project identity and context to the selected study.",
+      "html": "<a class=\"ds-index-row is-selected\" href=\"#\" aria-current=\"true\"><span class=\"ds-index-number\">01</span><span class=\"ds-index-copy\"><strong>Revalo</strong><small>Independent product</small></span><span class=\"ds-index-period\">FIELD STUDY</span></a>",
+      "css": ".ds-index-row{display:grid;grid-template-columns:31px minmax(0,1fr) auto;align-items:center;min-height:58px;padding:9px 0;border-bottom:1px dotted var(--rule-soft);color:var(--ink);font-family:var(--sans);text-decoration:none;transition:transform 180ms ease,background-color 180ms ease}.ds-index-row:hover,.ds-index-row:focus-visible{transform:translateX(4px);background:color-mix(in srgb,var(--orange) 7%,transparent)}.ds-index-row:focus-visible{outline:2px solid var(--focus);outline-offset:4px}.ds-index-number,.ds-index-period{color:var(--muted-readable);font-family:var(--mono);font-size:.64rem;font-variant-numeric:tabular-nums}.ds-index-row.is-selected .ds-index-number{color:var(--accent-ink)}.ds-index-copy{display:flex;min-width:0;flex-direction:column;gap:1px}.ds-index-copy strong{color:var(--ink);font-size:.92rem;font-weight:600;letter-spacing:.015em}.ds-index-copy small{color:var(--muted-readable);font-size:.7rem}.ds-index-period{text-align:right;letter-spacing:.04em}"
+    },
+    {
+      "name": "Mobile Project Select",
+      "kind": "button",
+      "refersTo": "mobile-project-select",
+      "description": "A touch-friendly project selector keeps canvas changes available without hover.",
+      "html": "<button class=\"ds-mobile-select\" type=\"button\" aria-pressed=\"true\"><span class=\"ds-mobile-number\">01</span><span class=\"ds-mobile-title\">Revalo</span><span class=\"ds-mobile-context\">Independent product</span></button>",
+      "css": ".ds-mobile-select{display:grid;grid-template-columns:1fr;grid-template-rows:auto 1fr;align-content:start;justify-items:start;min-height:68px;padding:8px;border:1px solid var(--rule-soft);background:transparent;color:var(--ink);font-family:var(--sans);text-align:left;cursor:pointer}.ds-mobile-select:hover,.ds-mobile-select[aria-pressed=true]{background:color-mix(in srgb,var(--orange) 8%,transparent)}.ds-mobile-select[aria-pressed=true] .ds-mobile-number{color:var(--accent-ink)}.ds-mobile-select[aria-pressed=true] .ds-mobile-title{text-decoration:underline;text-decoration-color:var(--orange);text-decoration-thickness:2px;text-underline-offset:5px}.ds-mobile-number{color:var(--muted-readable);font-family:var(--mono);font-size:.65rem}.ds-mobile-title{font-size:.86rem;font-weight:600}.ds-mobile-context{color:var(--muted-readable);font-family:var(--mono);font-size:.52rem;text-transform:uppercase}.ds-mobile-select:focus-visible{outline:2px solid var(--focus);outline-offset:4px}"
+    },
+    {
+      "name": "Archive Filter",
+      "kind": "chip",
+      "refersTo": "filter-button",
+      "description": "Small mono filter buttons show the current archive scope with a near-black fill.",
+      "html": "<div class=\"ds-filters\" role=\"group\" aria-label=\"Filter projects by type\"><button type=\"button\" aria-pressed=\"true\">All work</button><button type=\"button\" aria-pressed=\"false\">Independent</button><button type=\"button\" aria-pressed=\"false\">Company work</button></div>",
+      "css": ".ds-filters{display:flex;flex-wrap:wrap;gap:6px}.ds-filters button{min-height:32px;padding:0 9px;border:1px solid var(--rule-soft);border-radius:0;background:transparent;color:var(--muted-readable);font-family:var(--mono);font-size:.57rem;cursor:pointer}.ds-filters button:hover,.ds-filters button[aria-pressed=true]{border-color:var(--ink);background:var(--ink);color:var(--paper)}.ds-filters button:focus-visible{outline:2px solid var(--focus);outline-offset:4px}"
+    },
+    {
+      "name": "Project Canvas",
+      "kind": "card",
+      "refersTo": "project-canvas",
+      "description": "A framed editorial study turns documented project facts into an information composition.",
+      "html": "<section class=\"ds-canvas\" aria-label=\"Project field study\"><p class=\"ds-canvas-meta\">FILE 01 / 04 · FIELD STUDY</p><figure class=\"ds-study\"><div class=\"ds-study-title\"><span>VALUE / INPUTS</span><strong>From vehicle<br>to valuation.</strong><small>R—01</small></div><div class=\"ds-study-facts\"><span>FOUR VEHICLE CLASSES</span><p>Cars · Motorcycles · Trucks · Commercial</p></div><figcaption>Editorial study · composed from documented project details</figcaption></figure></section>",
+      "css": ".ds-canvas{padding:clamp(18px,2vw,31px);background:var(--surface);color:var(--ink);font-family:var(--sans)}.ds-canvas-meta{margin:0 0 12px;color:var(--muted-readable);font-family:var(--mono);font-size:.58rem;letter-spacing:.1em}.ds-study{position:relative;display:grid;grid-template-columns:minmax(160px,.82fr) minmax(0,1.35fr);gap:clamp(12px,2vw,28px);min-height:300px;margin:0;padding:clamp(16px,3vw,32px);border:1px solid var(--rule);background:var(--surface-raised)}.ds-study-title{display:flex;flex-direction:column;justify-content:space-between;padding:clamp(16px,2vw,28px);background:var(--orange);color:var(--ink)}.ds-study-title span,.ds-study-title small{font-family:var(--mono);font-size:.58rem;letter-spacing:.08em}.ds-study-title strong{max-width:8ch;font-family:var(--display);font-size:clamp(2.4rem,5vw,4rem);font-weight:500;letter-spacing:-.055em;line-height:.8}.ds-study-facts{padding:18px;border:1px solid var(--rule);background:var(--paper)}.ds-study-facts span{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em}.ds-study-facts p{margin-top:24px;font-size:.9rem}.ds-study figcaption{position:absolute;right:10px;bottom:8px;color:var(--muted-readable);font-family:var(--mono);font-size:.48rem;letter-spacing:.04em;text-transform:uppercase}"
+    },
+    {
+      "name": "Field Notes Button",
+      "kind": "button",
+      "refersTo": "field-notes-button",
+      "description": "A quiet text action opens contextual facts for the active project.",
+      "html": "<button class=\"ds-notes-trigger\" type=\"button\" aria-expanded=\"false\"><span>Field notes</span></button>",
+      "css": ".ds-notes-trigger{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0;border:0;background:transparent;color:var(--muted-readable);font-family:var(--sans);font-size:.78rem;cursor:pointer;transition:color 160ms ease}.ds-notes-trigger:hover{color:var(--accent-ink)}.ds-notes-trigger:focus-visible{outline:2px solid var(--focus);outline-offset:4px}"
+    },
+    {
+      "name": "Case Study Link",
+      "kind": "custom",
+      "refersTo": "case-study-link",
+      "description": "A fine-bottom-rule link leads from the canvas to the full project record.",
+      "html": "<a class=\"ds-case-link\" href=\"#\">Case study <svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M7 3h6v6M13 3 6 10\"/></svg></a>",
+      "css": ".ds-case-link{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0;border-bottom:1px solid var(--rule);background:transparent;color:var(--ink);font-family:var(--sans);font-size:.78rem;text-decoration:none;transition:color 160ms ease}.ds-case-link:hover{color:var(--accent-ink)}.ds-case-link svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.6}.ds-case-link:focus-visible{outline:2px solid var(--focus);outline-offset:4px}"
+    },
+    {
+      "name": "Field Notes Panel",
+      "kind": "card",
+      "refersTo": "field-notes-panel",
+      "description": "A bordered paper overlay holds concise role and stack context over the canvas.",
+      "html": "<aside class=\"ds-notes-panel\" aria-label=\"Project field notes\"><div class=\"ds-notes-heading\"><span>FIELD NOTES · 01</span><button type=\"button\">Close</button></div><h3>Revalo</h3><p>Independent product</p></aside>",
+      "css": ".ds-notes-panel{width:min(370px,100%);padding:17px 18px 19px;border:1px solid var(--rule);background:var(--paper);color:var(--ink);font-family:var(--sans);box-shadow:0 10px 28px rgba(0,0,0,.12)}.ds-notes-heading{display:flex;align-items:center;justify-content:space-between;padding-bottom:10px;border-bottom:1px solid var(--rule-soft);color:var(--muted-readable);font-family:var(--mono);font-size:.58rem;letter-spacing:.08em}.ds-notes-heading button{min-height:32px;padding:0 7px;border:1px solid var(--rule-soft);background:transparent;color:var(--ink);font-family:var(--sans);font-size:.72rem;cursor:pointer}.ds-notes-heading button:hover{background:var(--surface)}.ds-notes-heading button:focus-visible{outline:2px solid var(--focus);outline-offset:3px}.ds-notes-panel h3{margin:13px 0 2px;font-family:var(--display);font-size:2rem;font-weight:500;line-height:1}.ds-notes-panel p{margin:5px 0;color:var(--muted-readable);font-size:.81rem}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Registered Archive",
+    "overview": "This portfolio behaves like a project register set on warm paper: firm columns, numbered entries, thin rules, and compact technical labels give the work a clear record. Oversized Cormorant Garamond headlines add an expressive editorial voice, while IBM Plex Sans and Mono keep explanations and metadata direct.\n\nThe canvas pairs an index with a generous project study. A brief orange registration shift marks a change of project; the accent stays deliberate, while the paper and near-black surfaces carry most of the page. Project compositions remain authored editorial studies made from documented facts until actual screenshots are supplied, and are identified as studies rather than product captures.",
+    "keyCharacteristics": [
+      "Asymmetric project index and canvas.",
+      "Warm paper, near-black, and restrained vivid orange.",
+      "Oversized serif headlines with compact mono metadata.",
+      "Fine rules, numbered folios, and a short registration reveal."
+    ],
+    "rules": [
+      {
+        "name": "The Registration Rule",
+        "body": "Orange and near-black may meet in a project composition to signal a change of record; keep that gesture contained to the active project and its selection cues.",
+        "section": "colors"
+      },
+      {
+        "name": "The Three-Voice Rule",
+        "body": "Reserve the serif for display hierarchy, keep prose in sans, and use mono for metadata rather than body paragraphs.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-At-Rest Rule",
+        "body": "Keep the archive and artwork surfaces flat at rest; reserve shadows for floating overlays.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Study Label Rule",
+        "body": "Keep project compositions clearly identified as editorial studies made from documented project details; replace them with actual captures only when those captures are supplied.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do keep the numbered index and asymmetric project canvas as the archive's organizing pattern.",
+      "Do use orange for active marks and contained project planes, with paper and near-black carrying the broader surface.",
+      "Do preserve readable contrast, visible focus, touch selection, and reduced-motion behavior across the archive.",
+      "Do identify authored project visuals as editorial studies rather than screenshots."
+    ],
+    "donts": [
+      "Don't turn the index-and-canvas composition into a stack of generic cards.",
+      "Don't invent project metrics or present an authored study as a captured product interface.",
+      "Don't use decorative controls that do not perform an action."
+    ]
+  }
+}

@@ -1,40 +1,29 @@
-# 💼 Jishnu A P - Developer Portfolio
+# Jishnu A P — Portfolio
 
-This is my personal portfolio website built using **Next.js**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**. It showcases my professional experience, projects, skills, and allows visitors to contact me directly.
+An editorial project archive and multi-page portfolio built with Next.js App Router, TypeScript, Tailwind CSS, Framer Motion and Lucide icons.
 
-## ✨ Features
-
-- ⚡ Fully responsive design
-- 🎨 Custom animations with Framer Motion
-- 🌙 Light/dark theme toggle
-- 🧩 Modular component architecture
-- 📬 Contact form with EmailJS integration
-- 🗂 Project showcase with live links
-- 📄 Resume download
-- 🔍 Active section tracking with smooth navigation
-
-## 🛠️ Built With
-
-- [Next.js](https://nextjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [EmailJS](https://www.emailjs.com/)
-- [Lucide Icons](https://lucide.dev/)
-
-## 📦 Setup & Installation
+## Run locally
 
 ```bash
-# Clone the repository
-git clone https://github.com/APJishnu/jishnu-portfolio.git
-cd jishnu-portfolio
-
-# Install dependencies
 npm install
-
-# Add your environment variables
-cp .env.local.example .env.local
-# Then fill in your EmailJS PUBLIC KEY, TEMPLATE ID, and SERVICE ID
-
-# Run locally
 npm run dev
+```
+
+Visit `http://localhost:3000`.
+
+## Routes
+
+- `/` — Interactive project index, experience preview, skills and contact invitation
+- `/work` — Filterable project archive
+- `/work/[slug]` — Data-driven case studies
+- `/experience` — Professional timeline and contributions
+- `/about` — Engineering practice, skills, education and certifications
+- `/contact` — Email, LinkedIn and GitHub
+
+## Content and visuals
+
+Project facts live in `src/data/projects.ts`; profile, skills and experience are in their own files under `src/data/`. Revalo and CineMagic link to the live URLs provided by Jishnu. GitHub links to his profile; VoteFriar and Okinawa Navi remain company contributions without public demo links. No actual project screenshots were supplied, so the project canvas uses clearly labeled editorial studies built from documented project details. These studies do not imitate the products' interfaces.
+
+The portfolio uses a direct email link instead of an unimplemented form. TanStack Query is not installed because the site has no remote server-state use case; the project's content is static local data. GSAP is not used because the project transitions do not require scroll timelines.
+
+The supplied portrait is stored as an optimized WebP at `public/images/jishnu-portrait.webp` and used on the About page. The provided resume remains outside `public/`; this avoids publishing the phone number it contains. No phone number or unverified availability claim is shown on the site.
