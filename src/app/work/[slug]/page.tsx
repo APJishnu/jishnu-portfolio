@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
 import { OpportunityBand } from "@/components/layout/opportunity-band";
+import { Reveal } from "@/components/animations/reveal";
+import { TextReveal } from "@/components/animations/text-reveal";
 import { ProjectArtworkReveal } from "@/components/projects/project-artwork-reveal";
 import { getProjectBySlug, projects } from "@/data/projects";
 
@@ -47,7 +49,7 @@ export default async function ProjectCaseStudy({ params }: ProjectPageProps) {
       <header className="case-hero">
         <div className="case-title-block">
           <p className="mono-label">{project.category.toUpperCase()}</p>
-          <h1>{project.title}</h1>
+          <h1 aria-label={project.title}><TextReveal text={project.title} /></h1>
           <p className="case-summary">{project.summary}</p>
           {project.liveUrl && (
             <a className="project-live-link" href={project.liveUrl} target="_blank" rel="noreferrer">
@@ -70,10 +72,10 @@ export default async function ProjectCaseStudy({ params }: ProjectPageProps) {
 
       <section className="case-overview section-shell">
         <div className="case-section-label"><span className="mono-label">PROJECT / OVERVIEW</span><span className="case-section-number">{project.number}</span></div>
-        <div className="case-overview-copy">
+        <Reveal className="case-overview-copy" delay={0.06}>
           <h2>{project.purpose}</h2>
           <p>{project.overview}</p>
-        </div>
+        </Reveal>
       </section>
 
       <section className="case-contribution section-shell">

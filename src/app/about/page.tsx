@@ -4,6 +4,8 @@ import Link from "next/link";
 import { OpportunityBand } from "@/components/layout/opportunity-band";
 import { PageIntro } from "@/components/layout/page-intro";
 import { PortraitFigure } from "@/components/about/portrait-figure";
+import { Reveal } from "@/components/animations/reveal";
+import { ResumeDownloadLink } from "@/components/common/resume-download-link";
 import { profile } from "@/data/profile";
 import { skillGroups } from "@/data/skills";
 
@@ -33,13 +35,16 @@ export default function AboutPage() {
       />
       <section className="about-statement section-shell">
         <PortraitFigure />
-        <div>
+        <Reveal className="about-statement-copy" delay={0.08}>
           <p className="mono-label">JISHNU A P · {profile.location.toUpperCase()}</p>
           <h2>Full-stack development, from the interface to the service behind it.</h2>
           <p>I like work where interface decisions connect to the API and data operations that make an application useful.</p>
           <p>At JIIXEL ARC, my current focus is frontend development for Okinawa Navi’s admin application. At Techfriar I worked across product interfaces, APIs, authentication, payments and live updates. Revalo is where I take responsibility for an independent product end to end.</p>
-          <Link className="text-link" href="/experience">Professional experience <ArrowUpRight size={14} aria-hidden="true" /></Link>
-        </div>
+          <div className="about-action-row">
+            <Link className="text-link" href="/experience">Professional experience <ArrowUpRight size={14} aria-hidden="true" /></Link>
+            <ResumeDownloadLink variant="prominent" />
+          </div>
+        </Reveal>
       </section>
 
       <section className="approach-section section-shell">

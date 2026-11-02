@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 
+import { imageRevealVariants } from "@/lib/animations/variants";
+
 export function PortraitFigure() {
   const reducedMotion = useReducedMotion();
 
@@ -15,11 +17,12 @@ export function PortraitFigure() {
       <div className="portrait-frame">
         <motion.div
           className="portrait-image-reveal"
-          initial={false}
-          animate={reducedMotion ? undefined : { clipPath: "inset(0 0 0 0)", y: 0 }}
-          whileInView={{ clipPath: "inset(0 0 0 0)", y: 0 }}
+          data-motion-reveal
+          initial={reducedMotion ? false : "hidden"}
+          whileInView="visible"
           viewport={{ once: true, amount: 0.28 }}
-          transition={reducedMotion ? { duration: 0 } : { duration: 0.82, ease: [0.22, 1, 0.36, 1] }}
+          variants={imageRevealVariants}
+          transition={reducedMotion ? { duration: 0 } : undefined}
         >
           <Image
             src="/images/jishnu-portrait.webp"

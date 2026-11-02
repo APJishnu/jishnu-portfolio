@@ -3,6 +3,8 @@ import "@/app/globals.css";
 
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { PageTransition } from "@/components/animations/page-transition";
+import { ScrollProgress } from "@/components/animations/scroll-progress";
 
 export const metadata: Metadata = {
   title: {
@@ -34,11 +36,12 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" data-theme="paper">
+    <html lang="en" data-theme="paper" data-scroll-behavior="smooth">
       <body>
         <a className="skip-link" href="#main-content">Skip to content</a>
+        <ScrollProgress />
         <SiteHeader />
-        <main id="main-content">{children}</main>
+        <main id="main-content"><PageTransition>{children}</PageTransition></main>
         <SiteFooter />
       </body>
     </html>

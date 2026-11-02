@@ -6,6 +6,10 @@ export const profile = {
   email: "apjishnu23@gmail.com",
   linkedin: "https://www.linkedin.com/in/jishnu-ap-335184308/",
   github: "https://github.com/APJishnu",
+  resume: {
+    href: "/resume/JISHNU_TECH_RESUME.pdf",
+    filename: "JISHNU_TECH_RESUME.pdf",
+  },
   headline: "I build digital experiences that make ideas work.",
   introduction:
     "Full-Stack Developer at JIIXEL ARC, previously at Techfriar. I work across Next.js interfaces, backend services and APIs.",

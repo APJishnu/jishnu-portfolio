@@ -6,6 +6,8 @@ import { motion, useInView, useReducedMotion } from "framer-motion";
 import { useRef } from "react";
 
 import type { ExperienceEntry } from "@/data/experience";
+import { motionEase, motionTiming } from "@/lib/animations/motion-config";
+import { staggerContainerVariants, staggerItemVariants } from "@/lib/animations/variants";
 
 interface ExperienceTimelineProps {
   entries: readonly ExperienceEntry[];
@@ -20,10 +22,11 @@ function ExperienceEntryView({ item, index, last }: { item: ExperienceEntry; ind
     <motion.article
       ref={entryRef}
       className={`experience-entry${current ? " is-current" : ""}`}
+      data-motion-reveal
       initial={reducedMotion ? false : { opacity: 0, y: 18, clipPath: "inset(0 0 12% 0)" }}
       whileInView={{ opacity: 1, y: 0, clipPath: "inset(0 0 0 0)" }}
       viewport={{ once: true, amount: 0.16 }}
-      transition={reducedMotion ? { duration: 0 } : { duration: 0.62, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
+      transition={reducedMotion ? { duration: 0 } : { duration: motionTiming.reveal, delay: index * 0.08, ease: motionEase.editorial }}
     >
       <div className="experience-entry-rail">
         <span className="experience-node" aria-hidden="true" />
@@ -47,9 +50,17 @@ function ExperienceEntryView({ item, index, last }: { item: ExperienceEntry; ind
           <ArrowUpRight size={16} strokeWidth={1.6} aria-hidden="true" />
         </Link>
 
-        <ul className="contribution-list experience-priority-list" aria-label={`Selected responsibilities at ${item.company}`}>
-          {item.contributions.slice(0, 2).map((contribution) => <li key={contribution}>{contribution}</li>)}
-        </ul>
+        <motion.ul
+          className="contribution-list experience-priority-list"
+          data-motion-stagger
+          aria-label={`Selected responsibilities at ${item.company}`}
+          variants={staggerContainerVariants}
+          initial={reducedMotion ? false : "hidden"}
+          whileInView={reducedMotion ? undefined : "visible"}
+          viewport={{ once: true, amount: 0.25 }}
+        >
+          {item.contributions.slice(0, 2).map((contribution) => <motion.li key={contribution} variants={staggerItemVariants} initial={reducedMotion ? false : undefined}>{contribution}</motion.li>)}
+        </motion.ul>
 
         <details className="experience-details">
           <summary>Full responsibilities and technologies</summary>

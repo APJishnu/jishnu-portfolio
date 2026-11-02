@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from "react";
 
 import type { Project } from "@/data/projects";
 import { ProjectArtwork } from "@/components/projects/project-artwork";
+import { motionTiming, motionEase } from "@/lib/animations/motion-config";
 
 interface ProjectCanvasProps {
   project: Project;
@@ -37,7 +38,7 @@ export function ProjectCanvas({ project, total }: ProjectCanvasProps) {
 
   const transition = reducedMotion
     ? { duration: 0 }
-    : { duration: 0.42, ease: [0.22, 1, 0.36, 1] as const };
+    : { duration: motionTiming.page, ease: motionEase.editorial };
   const closeNotes = () => {
     setNotesOpen(false);
     triggerRef.current?.focus();
@@ -47,14 +48,19 @@ export function ProjectCanvas({ project, total }: ProjectCanvasProps) {
     <section className="project-canvas" aria-label={`Selected project: ${project.title}`}>
       <div className="canvas-topline">
         <span className="mono-label">FILE {project.number} / 0{total} · FIELD STUDY</span>
-        <span className="canvas-category">{project.category}</span>
-        <span className="mono-label canvas-period">{project.periodShort}</span>
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.span key={`${project.slug}-category`} className="canvas-category" initial={reducedMotion ? false : { opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} exit={reducedMotion ? undefined : { opacity: 0, y: -4 }} transition={transition}>{project.category}</motion.span>
+        </AnimatePresence>
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.span key={`${project.slug}-period`} className="mono-label canvas-period" initial={reducedMotion ? false : { opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} exit={reducedMotion ? undefined : { opacity: 0, y: -3 }} transition={transition}>{project.periodShort}</motion.span>
+        </AnimatePresence>
       </div>
 
       <div className="canvas-frame">
         <AnimatePresence mode="sync" initial={false}>
         <motion.div
           className="canvas-frame-layer"
+          data-motion-reveal
           key={project.slug}
           initial={reducedMotion ? false : { opacity: 1, clipPath: "inset(0 0 0 8%)" }}
           animate={{ opacity: 1, clipPath: "inset(0 0 0 0%)" }}
@@ -68,7 +74,11 @@ export function ProjectCanvas({ project, total }: ProjectCanvasProps) {
       </div>
 
       <div className="canvas-bottomline">
-        <p className="canvas-summary" aria-live="polite">{project.summary}</p>
+        <div className="canvas-summary-region" aria-live="polite" aria-atomic="true">
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.p key={`${project.slug}-summary`} className="canvas-summary" initial={reducedMotion ? false : { opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={reducedMotion ? undefined : { opacity: 0, y: -4 }} transition={transition}>{project.summary}</motion.p>
+          </AnimatePresence>
+        </div>
         <div className="canvas-actions">
           <button
             ref={triggerRef}
@@ -92,8 +102,9 @@ export function ProjectCanvas({ project, total }: ProjectCanvasProps) {
         </div>
       </div>
 
+      <AnimatePresence initial={false}>
       {notesOpen && (
-        <aside className="project-notes" id="project-notes" role="region" aria-label={`${project.title} field notes`}>
+        <motion.aside className="project-notes" id="project-notes" role="region" aria-label={`${project.title} field notes`} initial={reducedMotion ? false : { opacity: 0, y: 9 }} animate={{ opacity: 1, y: 0 }} exit={reducedMotion ? undefined : { opacity: 0, y: 6 }} transition={transition}>
           <div className="notes-heading"><span className="mono-label">FIELD NOTES · {project.number}</span>
             <button type="button" className="notes-close" aria-label="Close field notes" onClick={closeNotes}>
               <X size={16} strokeWidth={1.6} aria-hidden="true" />
@@ -103,8 +114,9 @@ export function ProjectCanvas({ project, total }: ProjectCanvasProps) {
           <p>{project.role}</p>
           {project.affiliation && <p className="notes-affiliation">{project.affiliation}</p>}
           <div className="notes-tags"><span>{projectGroup}</span>{project.stack.slice(0, 3).map((item) => <span key={item}>{item}</span>)}</div>
-        </aside>
+        </motion.aside>
       )}
+      </AnimatePresence>
     </section>
   );
 }

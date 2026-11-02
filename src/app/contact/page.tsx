@@ -1,5 +1,6 @@
 import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 
+import { ResumeDownloadLink } from "@/components/common/resume-download-link";
 import { PageIntro } from "@/components/layout/page-intro";
 import { profile } from "@/data/profile";
 
@@ -32,6 +33,7 @@ export default function ContactPage() {
           <p className="mono-label">PROFILES</p>
           <a href={profile.linkedin} target="_blank" rel="noreferrer"><Linkedin size={18} strokeWidth={1.5} aria-hidden="true" /><span>LinkedIn</span><ArrowUpRight size={15} aria-hidden="true" /></a>
           <a href={profile.github} target="_blank" rel="noreferrer"><Github size={18} strokeWidth={1.5} aria-hidden="true" /><span>GitHub</span><ArrowUpRight size={15} aria-hidden="true" /></a>
+          <ResumeDownloadLink variant="text" label="Download resume (PDF)" />
           <p className="contact-location">{profile.location}</p>
         </div>
       </section>

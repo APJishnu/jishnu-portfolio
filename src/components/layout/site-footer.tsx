@@ -17,6 +17,7 @@ export function SiteFooter() {
         <span>© {new Date().getFullYear()} {profile.name}</span>
         <nav aria-label="Footer links">
           <Link href={routes.work}>Work</Link>
+          <a href={profile.resume.href} download={profile.resume.filename}>Resume</a>
           <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
           <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
         </nav>
