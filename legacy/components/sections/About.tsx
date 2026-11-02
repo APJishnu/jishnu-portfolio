@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "../ui/button";
+import { Card, CardContent } from "../ui/card";
 import { Download, User, GraduationCap, Briefcase, Heart } from "lucide-react";
 import styles from "./About.module.scss";
 import Image from "next/image";

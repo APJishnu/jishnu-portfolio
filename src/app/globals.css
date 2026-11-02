@@ -616,7 +616,8 @@ button:focus:not(:focus-visible), a:focus:not(:focus-visible) { outline: none; }
   .brand-name { font-size: 0.78rem; }
   .theme-toggle { width: 38px; padding: 0; }
   .theme-toggle-label { display: none; }
-  .top-index-strip { grid-template-columns: 1fr auto; gap: 10px; min-height: 42px; padding-right: var(--page-gutter); padding-left: var(--page-gutter); font-size: 0.53rem; letter-spacing: 0.06em; }
+  .top-index-strip { grid-template-columns: minmax(0, 1fr) auto; gap: 10px; min-height: 42px; padding-right: var(--page-gutter); padding-left: var(--page-gutter); font-size: 0.53rem; letter-spacing: 0.06em; }
+  .top-index-strip > :first-child { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
   .top-index-strip .strip-center { display: none; }
   .top-index-strip > :last-child { font-size: 0.5rem; }
   .project-browser, .project-browser-archive {
@@ -655,10 +656,10 @@ button:focus:not(:focus-visible), a:focus:not(:focus-visible) { outline: none; }
   .canvas-topline { grid-template-columns: 1fr auto; min-height: 25px; margin-bottom: 9px; }
   .canvas-topline > .mono-label:first-child { font-size: 0.54rem; }
   .canvas-period { font-size: 0.53rem; }
-  .canvas-frame { min-height: 0; flex: none; aspect-ratio: 0.97 / 1; }
+  .canvas-frame { min-height: 0; flex: none; aspect-ratio: 0.86 / 1; }
   .project-artwork { min-height: 0; height: 100%; aspect-ratio: auto; }
-  .artwork-disclosure { right: 8px; bottom: 7px; max-width: 76%; font-size: 0.46rem; text-align: right; }
-  .study-layout { padding: 13px; }
+  .artwork-disclosure { right: 0; bottom: 0; left: 0; max-width: none; min-height: 23px; padding: 4px 6px; border-top: 1px solid var(--rule-soft); background: var(--surface-raised); font-size: 0.4rem; line-height: 1.2; text-align: left; }
+  .study-layout { inset: 0 0 23px; padding: 13px; }
   .study-layout::after { width: 12%; }
   .study-revalo { grid-template-columns: 0.72fr 1fr; grid-template-rows: 1fr 27px; gap: 7px; }
   .study-revalo-title { padding: 12px 10px; }
@@ -729,7 +730,7 @@ button:focus:not(:focus-visible), a:focus:not(:focus-visible) { outline: none; }
   .home-experience, .home-capabilities, .about-preview { grid-template-columns: 1fr; gap: 28px; padding-top: 55px; padding-bottom: 58px; }
   .section-lead h2, .capabilities-title h2 { margin-top: 12px; font-size: 4rem; }
   .section-lead > p:not(.mono-label), .capabilities-title > p:not(.mono-label) { max-width: 42ch; font-size: 0.83rem; }
-  .experience-preview-row { grid-template-columns: 28px minmax(0, 1fr) auto; align-items: start; gap: 10px; min-height: 82px; }
+  .experience-preview-row { grid-template-columns: 28px minmax(0, 1fr); align-items: start; gap: 0 10px; min-height: 82px; }
   .experience-preview-row > .mono-label:first-child { grid-row: 1 / span 2; }
   .experience-preview-copy { grid-column: 2; grid-row: 1; }
   .experience-preview-row h3 { font-size: 0.95rem; }
@@ -737,7 +738,7 @@ button:focus:not(:focus-visible), a:focus:not(:focus-visible) { outline: none; }
   .experience-preview-copy { padding: 13px 0 16px; }
   .experience-preview-feature { gap: 3px 6px; font-size: 0.68rem; }
   .experience-preview-feature span { flex-basis: 100%; font-size: 0.64rem; }
-  .preview-period { grid-column: 3; grid-row: 1; margin-top: 0; padding-bottom: 0; text-align: right; }
+  .preview-period { grid-column: 2; grid-row: 2; justify-self: start; margin-top: 0; padding: 0 0 12px; text-align: left; }
   .capability-row { grid-template-columns: 95px minmax(0, 1fr); gap: 10px; padding: 14px 0; }
   .capability-row h3 { font-size: 0.79rem; }
   .capability-row p { font-size: 0.73rem; }
@@ -798,7 +799,8 @@ button:focus:not(:focus-visible), a:focus:not(:focus-visible) { outline: none; }
   .contact-page { grid-template-columns: 1fr; gap: 35px; padding-top: 42px; padding-bottom: 55px; }
   .contact-primary { padding-top: 0; }
   .contact-icon { margin-bottom: 21px; }
-  .contact-email { font-size: clamp(2.4rem, 10vw, 3.6rem); }
+  .contact-email { font-size: clamp(1.85rem, 8.8vw, 2.45rem); }
+  .contact-email-address { min-width: 0; overflow-wrap: anywhere; }
   .contact-close { grid-template-columns: 1fr; gap: 8px; }
   .case-strip { min-height: 43px; }
   .case-strip .mono-label { font-size: 0.48rem; letter-spacing: 0.04em; }
@@ -809,7 +811,7 @@ button:focus:not(:focus-visible), a:focus:not(:focus-visible) { outline: none; }
   .case-meta-grid { grid-template-columns: 1fr 1fr; }
   .case-meta-grid strong { font-size: 0.69rem; }
   .case-art-section { padding: 15px var(--page-gutter); }
-  .case-art-section .project-artwork { height: auto; min-height: 0; aspect-ratio: 0.97 / 1; }
+  .case-art-section .project-artwork { height: auto; min-height: 0; aspect-ratio: 0.86 / 1; }
   .case-art-section .study-future-scope { font-size: 0.5rem; }
   .case-overview, .case-contribution, .case-capabilities, .case-architecture, .case-engineering { grid-template-columns: 1fr; gap: 17px; padding-top: 35px; padding-bottom: 38px; }
   .case-section-label { align-items: center; }
@@ -824,7 +826,8 @@ button:focus:not(:focus-visible), a:focus:not(:focus-visible) { outline: none; }
   .architecture-row .mono-label { font-size: 0.49rem; }
   .architecture-row h3 { font-size: 0.75rem; }
   .architecture-row p { font-size: 0.72rem; }
-  .engineering-notes > p { grid-template-columns: 30px 1fr; gap: 8px; font-size: 0.77rem; }
+  .engineering-notes > p { grid-template-columns: 30px minmax(0, 1fr); gap: 8px; font-size: 0.77rem; }
+  .engineering-notes .source-note { grid-template-columns: minmax(4.6rem, auto) minmax(0, 1fr); align-items: start; }
   .case-pagination { gap: 9px; padding-top: 17px; padding-bottom: 23px; }
   .case-pagination-link strong { font-size: 1.8rem; }
   .case-pagination-link .mono-label { font-size: 0.49rem; }
@@ -834,6 +837,9 @@ button:focus:not(:focus-visible), a:focus:not(:focus-visible) { outline: none; }
 
 @media (max-width: 360px) {
   :root { --page-gutter: 14px; }
+  .case-meta-grid { grid-template-columns: minmax(0, 1fr); }
+  .study-revalo { grid-template-rows: 1fr 34px; }
+  .study-revalo-band { flex-wrap: wrap; justify-content: flex-start; gap: 1px 7px; padding: 3px 5px; font-size: 0.39rem; line-height: 1.15; letter-spacing: 0.02em; }
   .project-index-period { max-width: 81px; overflow: hidden; text-overflow: ellipsis; }
   .study-vote-flow > div span { font-size: 0.48rem; }
   .study-cine-flow { font-size: 0.4rem; }
