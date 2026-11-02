@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { navigation, routes } from "@/lib/routes";
 import { profile } from "@/data/profile";
+import { ResumeDownloadLink } from "@/components/common/resume-download-link";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -70,6 +71,7 @@ export function SiteHeader() {
           {theme === "paper" ? <Moon size={16} strokeWidth={1.6} /> : <Sun size={16} strokeWidth={1.6} />}
           <span className="theme-toggle-label">{theme === "paper" ? "Ink" : "Paper"}</span>
         </button>
+        <ResumeDownloadLink variant="compact" />
         <button
           ref={menuButtonRef}
           className="menu-toggle"

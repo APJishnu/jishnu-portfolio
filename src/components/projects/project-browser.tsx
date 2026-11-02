@@ -6,8 +6,11 @@ import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
 
 import { ProjectCanvas } from "@/components/projects/project-canvas";
+import { Reveal } from "@/components/animations/reveal";
+import { TextReveal } from "@/components/animations/text-reveal";
 import { projects, type Project, type ProjectGroup } from "@/data/projects";
 import { profile } from "@/data/profile";
+import { motionTiming } from "@/lib/animations/motion-config";
 
 type ProjectFilter = "all" | ProjectGroup;
 
@@ -31,6 +34,7 @@ function IndexRow({
   selected: boolean;
   onPreview: (slug: string) => void;
 }) {
+  const reducedMotion = useReducedMotion();
   const contextLabel = project.group === "independent"
     ? "Independent product"
     : project.group === "company"
@@ -39,6 +43,7 @@ function IndexRow({
 
   return (
     <li className={`project-index-row${selected ? " is-selected" : ""}`}>
+      {selected && <motion.span className="project-active-indicator" layoutId={reducedMotion ? undefined : "project-active-indicator"} transition={reducedMotion ? { duration: 0 } : { duration: motionTiming.quick, ease: [0.22, 1, 0.36, 1] }} aria-hidden="true" />}
       <Link
         className="project-index-link"
         href={`/work/${project.slug}`}
@@ -74,7 +79,6 @@ function IndexRow({
 }
 
 export function ProjectBrowser({ variant }: ProjectBrowserProps) {
-  const reducedMotion = useReducedMotion();
   const [activeSlug, setActiveSlug] = useState("revalo");
   const [filter, setFilter] = useState<ProjectFilter>("all");
   const visibleProjects = useMemo(
@@ -98,25 +102,21 @@ export function ProjectBrowser({ variant }: ProjectBrowserProps) {
           {variant === "home" ? (
             <div className="home-introduction">
               <p className="mono-label intro-kicker">FULL-STACK DEVELOPER · KERALA</p>
-              <motion.h1
-                initial={reducedMotion ? false : { clipPath: "inset(0 0 100% 0)", opacity: 0.25 }}
-                animate={{ clipPath: "inset(0 0 0 0)", opacity: 1 }}
-                transition={reducedMotion ? { duration: 0 } : { duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
-              >
-                {profile.headline}
-              </motion.h1>
-              <p className="home-introduction-copy">{profile.introduction}</p>
-              <div className="experience-intro-line" aria-label="Professional experience">
-                <span className="mono-label career-index">CAREER /</span>
-                <span className="career-record"><strong>JIIXEL ARC</strong><small>2026—PRESENT</small></span>
-                <span className="career-record"><strong>TECHFRIAR</strong><small>2024—2025</small></span>
-              </div>
+              <h1 aria-label={profile.headline}><TextReveal text={profile.headline} /></h1>
+              <Reveal className="home-supporting-reveal" delay={0.18}>
+                <p className="home-introduction-copy">{profile.introduction}</p>
+                <div className="experience-intro-line" aria-label="Professional experience">
+                  <span className="mono-label career-index">CAREER /</span>
+                  <span className="career-record"><strong>JIIXEL ARC</strong><small>2026—PRESENT</small></span>
+                  <span className="career-record"><strong>TECHFRIAR</strong><small>2024—2025</small></span>
+                </div>
+              </Reveal>
               <div className="intro-rule" />
             </div>
           ) : (
             <div className="archive-introduction">
               <p className="mono-label intro-kicker">PROJECT REGISTER · 04 ENTRIES</p>
-              <h1>Work, in progress.</h1>
+              <h1 aria-label="Work, in progress."><TextReveal text="Work, in progress." /></h1>
               <p className="home-introduction-copy">Independent product work and company contributions, filed by what they do.</p>
               <div className="intro-rule" />
             </div>
